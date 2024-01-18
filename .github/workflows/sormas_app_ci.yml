@@ -62,7 +62,7 @@ jobs:
         # Check if PR results from the repository: if yes, it is safe to cache dependencies.
         # This is to keep us safe from cache poisoning through 3rd party PRs.
         if: ${{ fromJSON(env.PRIVILEGED_RUN) }}
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.m2
           key: ${{ runner.os }}-java-${{ env.JAVA }}-m2-${{ hashFiles('**/pom.xml') }}
@@ -73,7 +73,7 @@ jobs:
         run: mvn install -pl :sormas-api -am -DskipTests=true
 
       - name: Cache Gradle packages
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         # Check if PR results from the repository: if yes, it is safe to cache dependencies.
         # This is to keep us safe from cache poisoning through 3rd party PRs.
         if: ${{ fromJSON(env.PRIVILEGED_RUN) }}
@@ -93,7 +93,7 @@ jobs:
         # Check if PR results from the repository: if yes, it is safe to cache dependencies.
         # This is to keep us safe from cache poisoning through 3rd party PRs.
         if: ${{ fromJSON(env.PRIVILEGED_RUN) }}
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: avd-cache
         with:
           path: |

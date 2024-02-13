@@ -81,7 +81,7 @@ dependencies {
 	implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.9.3'
 	implementation group: 'net.lingala.zip4j', name: 'zip4j', version: '2.11.5'
 
-	implementation group: 'com.github.cafdataprocessing', name: 'language-detection', version: '4.1.0-1206'
+	implementation group: 'com.github.cafdataprocessing', name: 'language-detection', version: '5.0.0-1351'
 	implementation group: 'org.apache.tika', name: 'tika-langdetect-optimaize', version: '2.6.0'
 	implementation group: 'org.apache.tika', name: 'tika-langdetect', version: '2.6.0', ext: 'pom'
 	implementation group: 'org.apache.tika', name: 'tika-core', version: '2.6.0'
